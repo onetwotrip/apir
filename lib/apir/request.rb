@@ -181,6 +181,12 @@ module Apir
         when :json
           @headers[:content_type] ||= 'application/json'
           JSON.unparse(body)
+        when :file
+          @headers[:content_type] ||= 'multipart/form-data'
+          {
+            multipart: true,
+            **@body,
+          }
         else # as a string
           @headers[:content_type] ||= 'text'
           body.to_s

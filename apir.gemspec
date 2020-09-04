@@ -6,10 +6,10 @@ require 'apir/version'
 
 Gem::Specification.new do |spec|
   spec.name                  = 'apir'
-  spec.required_ruby_version = '>= 2.2.2'
+  spec.required_ruby_version = '>= 2.6.3'
 
   spec.version = Apir::VERSION
-  spec.authors = ['Andrey Shulzhenko']
+  spec.authors = ['Andrey Shulzhenko', 'Sergey Matveev']
   spec.email   = ['imnot.xen@gmail.com']
 
   spec.summary     = 'API Request module for testing frameworks'
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.12'
+  spec.add_development_dependency 'bundler', '~> 2.1.4'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'webmock', '~> 2.3.1'
